@@ -1,0 +1,151 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
+All colors MUST be HSL.
+*/
+
+@layer base {
+  :root {
+    /* Vibrant, energetic palette for youth ministry */
+    --background: 0 0% 100%;
+    --foreground: 220 20% 15%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 220 20% 15%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 220 20% 15%;
+
+    /* Softer purple primary - balanced and spiritual */
+    --primary: 262 45% 45%;
+    --primary-foreground: 0 0% 100%;
+    --primary-glow: 262 50% 55%;
+
+    /* Muted gradient secondary */
+    --secondary: 280 40% 40%;
+    --secondary-foreground: 0 0% 100%;
+
+    --muted: 240 10% 96%;
+    --muted-foreground: 220 15% 40%;
+
+    /* Softer accent for CTAs */
+    --accent: 340 50% 50%;
+    --accent-foreground: 0 0% 100%;
+
+    --destructive: 0 70% 50%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 240 10% 90%;
+    --input: 240 10% 95%;
+    --ring: 262 70% 50%;
+
+    --radius: 1rem;
+
+    /* Custom design tokens for modern, balanced feel */
+    --gradient-primary: linear-gradient(135deg, hsl(262 45% 45%), hsl(280 40% 40%));
+    --gradient-hero: linear-gradient(135deg, hsl(262 45% 45% / 0.95), hsl(280 40% 40% / 0.9));
+    --gradient-card: linear-gradient(145deg, hsl(0 0% 100%), hsl(240 20% 98%));
+    --shadow-elevated: 0 10px 40px -10px hsl(262 45% 45% / 0.3);
+    --shadow-soft: 0 4px 20px -4px hsl(220 20% 15% / 0.1);
+    --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    --transition-bounce: all 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+
+    --sidebar-background: 0 0% 98%;
+
+    --sidebar-foreground: 240 5.3% 26.1%;
+
+    --sidebar-primary: 240 5.9% 10%;
+
+    --sidebar-primary-foreground: 0 0% 98%;
+
+    --sidebar-accent: 240 4.8% 95.9%;
+
+    --sidebar-accent-foreground: 240 5.9% 10%;
+
+    --sidebar-border: 220 13% 91%;
+
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+
+  .dark {
+    --background: 220 25% 8%;
+    --foreground: 0 0% 98%;
+
+    --card: 220 20% 12%;
+    --card-foreground: 0 0% 98%;
+
+    --popover: 220 20% 12%;
+    --popover-foreground: 0 0% 98%;
+
+    --primary: 262 50% 55%;
+    --primary-foreground: 0 0% 100%;
+    --primary-glow: 262 55% 65%;
+
+    --secondary: 280 45% 50%;
+    --secondary-foreground: 0 0% 100%;
+
+    --muted: 220 20% 15%;
+    --muted-foreground: 220 10% 70%;
+
+    --accent: 340 55% 55%;
+    --accent-foreground: 0 0% 100%;
+
+    --destructive: 0 70% 50%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 220 15% 20%;
+    --input: 220 15% 20%;
+    --ring: 262 75% 60%;
+
+    --sidebar-background: 0 0% 10%;
+    --sidebar-foreground: 0 0% 98%;
+    --sidebar-primary: 136 15% 60%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 0 0% 15%;
+    --sidebar-accent-foreground: 0 0% 98%;
+    --sidebar-border: 0 0% 20%;
+    --sidebar-ring: 140 14% 48%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground font-body;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-heading;
+  }
+}
+
+@layer utilities {
+  .animate-fade-up {
+    animation: fade-up 0.8s ease-out forwards;
+  }
+
+  @keyframes fade-up {
+    from {
+      opacity: 0;
+      transform: translateY(30px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+}
